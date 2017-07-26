@@ -33,7 +33,7 @@ export default new VueRouter({
 > <br>However, Webpack will not generate chunks for subfolders of the specified folder. Use this information when structuring your `/src/components` folder to speed up build time.
 
 ## Avoiding lazy loading
-Lazy loading is very efficient for big websites/apps with lots of routes/pages. However, the benefits of lazy loading routes when building a small website/app fade away. Making an extra HTTP request for loading a 2-3KB page vue file is more costly than integrating the file in the main chunk.
+Lazy loading is very efficient for big websites/apps with lots of routes/pages. However, the benefits of lazy loading routes when building a small website/app fade away. Making an extra HTTP request for loading a 2-3KB page vue file is less costly than integrating the file in the main chunk.
 
 Let's learn how to avoid lazy loading a vue file. Take a look again at `/src/router.js`. Notice the `load()` function which does code splitting. All you have to do to avoid generating chunks is not use it, and instead import it directly:
 
